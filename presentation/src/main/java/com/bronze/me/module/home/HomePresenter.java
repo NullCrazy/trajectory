@@ -1,14 +1,10 @@
 package com.bronze.me.module.home;
 
+import com.bronze.me.module.MvpPresenter;
+
 /**
- * Created by Administrator on 2016/2/26.
+ * Created by lxg-pc on 2016/3/9.
  */
-public class HomePresenter {
-
-    public HomePresenter() {
-    }
-
-    public String getHello() {
-        return this.toString();
-    }
+public interface HomePresenter extends MvpPresenter<HomeView> {
+    String getHello();
 }

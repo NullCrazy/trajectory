@@ -10,6 +10,6 @@ import dagger.Provides;
 public class HomeModule {
     @Provides
     public HomePresenter providesHome() {
-        return new HomePresenter();
+        return new HomePresenterImpl();
     }
 }

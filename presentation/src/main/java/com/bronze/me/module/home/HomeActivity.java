@@ -1,33 +1,35 @@
 package com.bronze.me.module.home;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.bronze.me.R;
-import com.bronze.me.module.TrajectoryApplication;
+import com.bronze.me.module.MvpBaseActivity;
 
-import javax.inject.Inject;
-
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends MvpBaseActivity<HomePresenter> implements HomeView {
+    private static final String TAG = "HomeActivity";
     private HomeComponent homeComponent;
-    @Inject
-    HomePresenter presenter;
+
+    @Override
+    protected HomePresenter createPresenter() {
+        return homeComponent.getHomePresenter();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        initializeInjector();
         String s = presenter.getHello();
-        System.out.println(s);
+        Log.i(TAG, s);
     }
 
-    private void initializeInjector() {
+    @Override
+    public void initializeInjector() {
         homeComponent = DaggerHomeComponent.builder()
-                .appComponent(((TrajectoryApplication) getApplication()).getAppComponent())
+                .appComponent(getAppComponent())
+                .activityMoudel(getActivityMoudel())
                 .homeModule(new HomeModule())
                 .build();
         homeComponent.inject(this);
-
     }
 }
