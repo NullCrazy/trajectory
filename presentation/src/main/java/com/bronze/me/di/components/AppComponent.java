@@ -1,7 +1,10 @@
 package com.bronze.me.di.components;
 
+import android.content.Context;
+
 import com.bronze.me.di.modules.AppMoudel;
 import com.bronze.me.module.TrajectoryApplication;
+import com.squareup.picasso.Picasso;
 
 import javax.inject.Singleton;
 
@@ -13,5 +16,10 @@ import dagger.Component;
 @Singleton
 @Component(modules = AppMoudel.class)
 public interface AppComponent {
+
     void inject(TrajectoryApplication application);
+
+    Picasso picasso();
+
+    Context context();
 }

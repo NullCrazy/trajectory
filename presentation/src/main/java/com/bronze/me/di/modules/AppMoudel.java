@@ -1,6 +1,11 @@
 package com.bronze.me.di.modules;
 
 import android.app.Application;
+import android.content.Context;
+
+import com.squareup.picasso.Picasso;
+
+import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
@@ -17,7 +22,20 @@ public class AppMoudel {
     }
 
     @Provides
+    @Singleton
     public Application providesApplication() {
         return application;
+    }
+
+    @Provides
+    @Singleton
+    Context provideApplicationContext() {
+        return this.application;
+    }
+
+    @Provides
+    @Singleton
+    public Picasso providesPicasso(Context context) {
+        return Picasso.with(context);
     }
 }

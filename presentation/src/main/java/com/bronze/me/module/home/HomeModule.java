@@ -9,7 +9,7 @@ import dagger.Provides;
 @Module
 public class HomeModule {
     @Provides
-    public HomePresenter providesHome() {
-        return new HomePresenterImpl();
+    public HomePresenter providesHome(HomePresenterImpl homePresenter) {
+        return homePresenter;
     }
 }

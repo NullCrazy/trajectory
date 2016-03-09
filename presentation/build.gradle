@@ -61,6 +61,8 @@ android {
 dependencies {
     def presentationDependencies = rootProject.ext.presentationDependencies;
     compile presentationDependencies.android_support_v7
+    compile presentationDependencies.butterKnife
+    compile presentationDependencies.picasso
     compile presentationDependencies.dagger
     apt presentationDependencies.daggerCompiler
     provided presentationDependencies.javaxAnnotation
