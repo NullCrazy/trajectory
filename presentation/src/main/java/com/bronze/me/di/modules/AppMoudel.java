@@ -2,7 +2,9 @@ package com.bronze.me.di.modules;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.SharedPreferences;
 
+import com.bronze.me.data.repository.cache.SharedPreferencesUtils;
 import com.squareup.picasso.Picasso;
 
 import javax.inject.Singleton;
@@ -37,5 +39,11 @@ public class AppMoudel {
     @Singleton
     public Picasso providesPicasso(Context context) {
         return Picasso.with(context);
+    }
+
+    @Provides
+    @Singleton
+    public SharedPreferencesUtils providesSharedPreferences(SharedPreferencesUtils spfUtils) {
+        return spfUtils;
     }
 }
