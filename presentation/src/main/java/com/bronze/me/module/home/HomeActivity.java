@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.ImageView;
 
 import com.bronze.me.R;
+import com.bronze.me.data.repository.cache.PreferencesHelper;
 import com.bronze.me.module.MvpBaseActivity;
 import com.squareup.picasso.Picasso;
 
@@ -18,6 +19,8 @@ public class HomeActivity extends MvpBaseActivity<HomePresenter> implements Home
     @Bind(R.id.img_butter)
     ImageView imageView;
 
+    @Inject
+    PreferencesHelper spf;
     @Inject
     Picasso picasso;
     private HomeComponent homeComponent;
@@ -33,6 +36,7 @@ public class HomeActivity extends MvpBaseActivity<HomePresenter> implements Home
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         Log.i(TAG, presenter.getHello());
+        Log.i(TAG, spf.toString());
         picasso.load("http://cdn.duitang.com/uploads/item/201208/15/20120815193117_S2HVM.thumb.224_0.jpeg")
                 .into(imageView);
     }

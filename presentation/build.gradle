@@ -61,6 +61,7 @@ android {
 dependencies {
     def presentationDependencies = rootProject.ext.presentationDependencies;
 
+    compile presentationDependencies.recyclerView
     compile presentationDependencies.android_support_v7
     compile presentationDependencies.butterKnife
     compile presentationDependencies.picasso

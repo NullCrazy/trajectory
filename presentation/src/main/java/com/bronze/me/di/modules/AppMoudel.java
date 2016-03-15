@@ -2,9 +2,8 @@ package com.bronze.me.di.modules;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.SharedPreferences;
 
-import com.bronze.me.data.repository.cache.SharedPreferencesUtils;
+import com.bronze.me.data.repository.cache.PreferencesHelper;
 import com.squareup.picasso.Picasso;
 
 import javax.inject.Singleton;
@@ -43,7 +42,7 @@ public class AppMoudel {
 
     @Provides
     @Singleton
-    public SharedPreferencesUtils providesSharedPreferences(SharedPreferencesUtils spfUtils) {
+    public PreferencesHelper providesSharedPreferences(PreferencesHelper spfUtils) {
         return spfUtils;
     }
 }

@@ -14,11 +14,11 @@ import java.io.StreamCorruptedException;
 
 import javax.inject.Inject;
 
-public final class SharedPreferencesUtils {
+public final class PreferencesHelper {
     private Context context;
 
     @Inject
-    public SharedPreferencesUtils(Context context) {
+    public PreferencesHelper(Context context) {
         this.context = context;
     }
 
