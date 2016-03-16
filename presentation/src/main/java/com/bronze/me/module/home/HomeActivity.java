@@ -1,6 +1,9 @@
 package com.bronze.me.module.home;
 
+import android.content.pm.PackageInfo;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.ImageView;
 
@@ -18,6 +21,8 @@ public class HomeActivity extends MvpBaseActivity<HomePresenter> implements Home
     private static final String TAG = "HomeActivity";
     @Bind(R.id.img_butter)
     ImageView imageView;
+    @Bind(R.id.app_list)
+    RecyclerView appList;
 
     @Inject
     PreferencesHelper spf;
@@ -49,5 +54,10 @@ public class HomeActivity extends MvpBaseActivity<HomePresenter> implements Home
                 .homeModule(new HomeModule())
                 .build();
         homeComponent.inject(this);
+    }
+
+    @Override
+    public void setApplist(PackageInfo info) {
+        appList.setLayoutManager(new LinearLayoutManager(this));
     }
 }
