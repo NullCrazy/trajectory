@@ -14,7 +14,7 @@ public interface UserRepository {
     /**
      * Get an {@link rx.Observable} which will emit a List of {@link User}.
      */
-    Observable<List<User>> getUsers();
+
 
     /**
      * Get an {@link rx.Observable} which will emit a {@link User}.
