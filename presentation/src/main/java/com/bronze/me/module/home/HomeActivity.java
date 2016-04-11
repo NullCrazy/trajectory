@@ -18,7 +18,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class HomeActivity extends MvpBaseActivity<HomePresenter> implements HomeView {
-    private static final String TAG = "HomeActivity";
+    private final String TAG = this.getClass().getSimpleName();
     @Bind(R.id.img_butter)
     ImageView imageView;
     @Bind(R.id.app_list)

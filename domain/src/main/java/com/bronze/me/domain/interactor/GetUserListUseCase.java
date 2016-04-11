@@ -18,6 +18,6 @@ public class GetUserListUseCase extends UseCase {
 
     @Override
     public Observable buildUseCaseObservable() {
-        return this.userRepository.getUsers();
+        return this.userRepository.getUser(1);
     }
 }
