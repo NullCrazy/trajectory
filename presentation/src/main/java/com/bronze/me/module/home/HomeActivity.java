@@ -5,6 +5,9 @@ import android.support.v7.widget.Toolbar;
 
 import com.bronze.me.R;
 import com.bronze.me.absbase.MvpBaseActivity;
+import com.bronze.me.data.repository.cache.PreferencesHelper;
+
+import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -15,6 +18,9 @@ public class HomeActivity extends MvpBaseActivity<HomePresenter> implements Home
 
     @Bind(R.id.toolbar)
     Toolbar toolbar;
+
+    @Inject
+    PreferencesHelper preferencesHelper;
 
     @Override
     protected HomePresenter createPresenter() {
