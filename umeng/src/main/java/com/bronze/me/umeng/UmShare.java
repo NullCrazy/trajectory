@@ -22,7 +22,7 @@ public abstract class UmShare implements Authorize {
         if (umShareAPI == null) {
             umShareAPI = UMShareAPI.get(activity);
         }
-        umShareAPI.doOauthVerify(activity, platform, umAuthListener);
+        umShareAPI.deleteOauth(activity, platform, umAuthListener);
     }
 
     @Override

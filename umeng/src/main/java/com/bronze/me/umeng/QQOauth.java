@@ -1,8 +1,5 @@
 package com.bronze.me.umeng;
 
-import android.app.Activity;
-import android.content.Intent;
-
 import com.bronze.me.umeng.listener.OnQQAuthorizeListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;
 
