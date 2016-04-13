@@ -1,5 +1,5 @@
 
-package com.bronze.me.module;
+package com.bronze.me.absbase;
 
 public interface MvpView {
 }

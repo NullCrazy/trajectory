@@ -1,6 +1,7 @@
 package com.bronze.me.module.home;
 
-import com.bronze.me.module.MvpBasePresenter;
+
+import com.bronze.me.absbase.MvpBasePresenter;
 
 import javax.inject.Inject;
 

@@ -1,4 +1,4 @@
-package com.bronze.me.module;
+package com.bronze.me.absbase;
 
 import android.support.annotation.NonNull;
 

@@ -1,34 +1,20 @@
 package com.bronze.me.module.home;
 
-import android.content.pm.PackageInfo;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.widget.ImageView;
+import android.support.v7.widget.Toolbar;
 
 import com.bronze.me.R;
-import com.bronze.me.data.repository.cache.PreferencesHelper;
-import com.bronze.me.module.MvpBaseActivity;
-import com.squareup.picasso.Picasso;
-
-import javax.inject.Inject;
+import com.bronze.me.absbase.MvpBaseActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class HomeActivity extends MvpBaseActivity<HomePresenter> implements HomeView {
     private final String TAG = this.getClass().getSimpleName();
-    @Bind(R.id.img_butter)
-    ImageView imageView;
-    @Bind(R.id.app_list)
-    RecyclerView appList;
-
-    @Inject
-    PreferencesHelper spf;
-    @Inject
-    Picasso picasso;
     private HomeComponent homeComponent;
+
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
 
     @Override
     protected HomePresenter createPresenter() {
@@ -40,10 +26,7 @@ public class HomeActivity extends MvpBaseActivity<HomePresenter> implements Home
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
-        Log.i(TAG, presenter.getHello());
-        Log.i(TAG, spf.toString());
-        picasso.load("http://cdn.duitang.com/uploads/item/201208/15/20120815193117_S2HVM.thumb.224_0.jpeg")
-                .into(imageView);
+        setSupportActionBar(toolbar);
     }
 
     @Override
@@ -54,10 +37,5 @@ public class HomeActivity extends MvpBaseActivity<HomePresenter> implements Home
                 .homeModule(new HomeModule())
                 .build();
         homeComponent.inject(this);
-    }
-
-    @Override
-    public void setApplist(PackageInfo info) {
-        appList.setLayoutManager(new LinearLayoutManager(this));
     }
 }

@@ -25,10 +25,11 @@ ext {
     gsonVersion = '2.5'
     okHttpVersion = '2.6.0'
     nineoldandroids = '2.4.0'
-    android_percent = '23.1.1'
-    androidAnnotationsVersion = '23.1.1'
-    android_support_v4 = '23.1.1'
-    android_support_v7 = '23.1.1'
+    android_percent = '23.1.0'
+    androidAnnotationsVersion = '23.1.0'
+    android_support_v4 = '23.1.0'
+    android_support_v7 = '23.1.0'
+    design = '23.1.0'
 
     presentationDependencies = [
             leakcanary_android      : "com.squareup.leakcanary:leakcanary-android:${leakcanary}",
@@ -45,7 +46,8 @@ ext {
             javaxAnnotation         : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
             percent                 : "com.android.support:percent:${android_percent}",
             android_support_v4      : "com.android.support:support-v4:${android_support_v4}",
-            android_support_v7      : "com.android.support:appcompat-v7:${android_support_v7}"
+            android_support_v7      : "com.android.support:appcompat-v7:${android_support_v7}",
+            android_design          : "com.android.support:design:${design}"
     ]
 
     domainDependencies = [

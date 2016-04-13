@@ -1,12 +1,9 @@
 package com.bronze.me.module.home;
 
-import android.content.pm.PackageInfo;
-
-import com.bronze.me.module.MvpView;
+import com.bronze.me.absbase.MvpView;
 
 /**
  * Created by lxg-pc on 2016/3/9.
  */
-public interface HomeView extends MvpView {
-    void setApplist(PackageInfo info);
+public interface HomeView extends MvpView{
 }

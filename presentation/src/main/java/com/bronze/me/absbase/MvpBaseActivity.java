@@ -1,10 +1,11 @@
-package com.bronze.me.module;
+package com.bronze.me.absbase;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.bronze.me.di.components.AppComponent;
 import com.bronze.me.di.modules.ActivityMoudel;
+import com.bronze.me.module.TrajectoryApplication;
 
 /**
  * All activity must extend this activity.

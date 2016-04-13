@@ -1,4 +1,4 @@
-package com.bronze.me.module;
+package com.bronze.me.absbase;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,11 +1,11 @@
-package com.bronze.me.module;
+package com.bronze.me.absbase;
 
 import android.util.Log;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-import static com.bronze.me.module.Defaults.defaultValue;
+import static com.bronze.me.absbase.Defaults.defaultValue;
 import static java.lang.reflect.Proxy.newProxyInstance;
 
 /**
