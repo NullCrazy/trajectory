@@ -45,10 +45,4 @@ public class AppMoudel {
     public PreferencesHelper providesSharedPreferences(PreferencesHelper spfUtils) {
         return spfUtils;
     }
-/*
-    @Provides
-    @Singleton
-    public PreferencesHelper providesSharedPreferences() {
-        return new PreferencesHelper(provideApplicationContext());
-    }*/
 }

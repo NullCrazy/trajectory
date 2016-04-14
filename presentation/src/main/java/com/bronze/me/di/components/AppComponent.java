@@ -2,7 +2,6 @@ package com.bronze.me.di.components;
 
 import android.content.Context;
 
-import com.bronze.me.data.repository.cache.PreferencesHelper;
 import com.bronze.me.di.modules.AppMoudel;
 import com.bronze.me.module.TrajectoryApplication;
 import com.squareup.picasso.Picasso;
@@ -19,7 +18,7 @@ import dagger.Component;
 public interface AppComponent {
     void inject(TrajectoryApplication application);
 
-    PreferencesHelper getPreferencesHelper();
+    Picasso getPicasso();
 
     Context context();
 }
